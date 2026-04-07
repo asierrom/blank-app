@@ -1,5 +1,6 @@
 #Mòdul 1: Criptografia clàssica i vulnerabilitat (xifratge Cèsar)
 import time # Mòdul per cronometrar el temps en què un programa s'executa
+import random
 
 def xifrar_cesar(missatge_a_codificar, clau):
     # Es converteix el missatge a majúscules
@@ -28,7 +29,6 @@ def xifrar_cesar(missatge_a_codificar, clau):
             missatge_xifrat += caracter
             
     return missatge_xifrat
-
 
 def desxiframent_cesar(missatge_xifrat, missatge_original):
     # Es guarda el moment exacte en què comença el programa
@@ -65,6 +65,20 @@ def desxiframent_cesar(missatge_xifrat, missatge_original):
     # Es guarda el temps que ha trigat el programa en desxifrar el missatge       
     final_temps = time.time()
     return intent_desxifrat, (final_temps - inici_temps)
+
+def generar_joc_cesar():
+    frases = [
+            "CLAU INCORRECTA, TORNA A INTENTAR-HO",
+            "EL PROTOCOL QUANTIC ES EL FUTUR",
+            "AQUESTA WEB ES INCREIBLE PER ENTENDRE CRIPTOGRAFIA",
+            "LA CONTRASENYA ES #C0NTRA$3NYA",
+            "DEMA A L'ALBA FAREM L'INTERCANVI",
+            "AQUEST MISSATGE VA SER ESCRIT EL SET D'ABRIL DE 2026"
+        ]
+    frase = random.choice(frases)
+    clau = random.randint(1, 25)
+    # Es retorna la frase ja xifrada, la frase escollida i la clau original
+    return xifrar_cesar(frase, clau), frase, clau
 
 # NOTA: El programa agafa l'abecedari sense lletres especials de llengües específiques (com ho són la Ç o la Ñ).
 # Per tant, si s'usen aquestes lletres, el programa no les codifica i les deixa tal com hi són. 

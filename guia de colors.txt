@@ -1,0 +1,5 @@
+GUIA DE COLORS WEB:
+-"#2f3d92"
+-"#c9d9e9"
+- "#ddeaf7"
+-"#c5d5e5"
