@@ -1,4 +1,17 @@
-#Mòdul 1: Criptografia clàssica i vulnerabilitat (xifratge Cèsar)
+"""
+=============================================================================
+PROJECTE: Desxifra'm! - Simulador de Protocols Criptogràfics
+FITXER: M1_CriptoClàssica.py
+AUTOR: Asier Romero
+CURS: 2n de Batxillerat (Maristes Rubí)
+DATA DE CREACIÓ: Març 2026
+ÚLTIMA MODIFICACIÓ: Maig 2026
+VERSIÓ: 1.0
+DESCRIPCIÓ: Aquest mòdul conté la lògica pura del xifratge Cèsar 
+            i l'algorisme de desxiframent per força bruta per al Mòdul 1.
+=============================================================================
+"""
+
 import time # Mòdul per cronometrar el temps en què un programa s'executa
 import random
 
@@ -10,7 +23,7 @@ def xifrar_cesar(missatge_a_codificar, clau):
     abecedari = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" 
     
     missatge_xifrat = ""
-    
+
     # Es recorre caràcter per caràcter
     for caracter in missatge_a_codificar:
         
@@ -38,7 +51,7 @@ def desxiframent_cesar(missatge_xifrat, missatge_original):
     abecedari = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     missatge_original = missatge_original.upper() 
     
-    #La clau amb què comença el programa és 0 (no canvia el missatge original versus el xifrat)
+    # La clau amb què comença el programa és 0 (no canvia el missatge original versus el xifrat)
     clau_actual = 0
     trobat = False
     
@@ -50,7 +63,7 @@ def desxiframent_cesar(missatge_xifrat, missatge_original):
         for caracter in missatge_xifrat:
             if caracter in abecedari:
                 C = abecedari.find(caracter)
-                #Fórmula de desxifrat: P = (C - clau) mod 26
+                # Fórmula de desxifrat: P = (C - clau) mod 26
                 P = (C - clau_actual) % 26
                 intent_desxifrat += abecedari[P]
             else:
