@@ -1,19 +1,5 @@
-# 🎈 Blank app template
+# Desxifra'm! - Simulador de Protocols Criptogràfics 🔐 (Treball de Recerca 2027)
 
-A simple Streamlit app template for you to modify!
+Benvingut a **Desxifra'm!**, una aplicació web interactiva dissenyada per simular i comprendre el funcionament dels principals protocols criptogràfics.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
-
-### How to run it on your own machine
-
-1. Install the requirements
-
-   ```
-   $ pip install -r requirements.txt
-   ```
-
-2. Run the app
-
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+**Accedeix a l'aplicació en línia aquí:** [desxifram.streamlit.app](https://desxifram.streamlit.app)
